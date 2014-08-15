@@ -18,10 +18,6 @@
 
 gem_package "bundler"
 
-gem_package "eye" do
-  version node['eye']['version']
-end
-
 %w(conf_dir run_dir log_dir).each do |dir|
   directory "#{node['eye'][dir]}" do
     owner node['eye']['user']
